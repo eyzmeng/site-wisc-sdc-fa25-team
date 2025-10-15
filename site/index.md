@@ -2,4 +2,4 @@
 
 This magical link leads to [project ideas](ideas/).
 
-What's up
+Create a finance app that tracks your expenses and creates graphs based on the data.
