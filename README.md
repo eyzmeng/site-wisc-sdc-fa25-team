@@ -14,6 +14,13 @@ do not force push so that git-blame remains usable for you all.
 GitHub does not pose such restrictions (unless I pay which I won't :)
 thus it is your sole responsibility to make each other's lives easier.
 
+Please also be patient as the merging process is (painfully) manual.
+If you want changes to show up in real-time, you should help me on
+the [Webhook](https://github.com/rapidcow/site-wisc-sdc-fa25-team/tree/mod/cgi-bin)
+because I do not get paid nor get any credits for this :)
+Otherwise, just be patient... the world isn't going to explode within
+the 3-or-so hours of me having my lectures....
+
 If you have sensitive information you would like to have removed from
 the Git commit metadata, please DM me on Discord (yizmeng or yizmeng#7942),
 or reach out via any of the emails listed in <https://www.endfindme.com/discord#contact>.
