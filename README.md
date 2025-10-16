@@ -11,8 +11,8 @@ one another's idea.
 Please refrain from editing anything file outside of the `site/`
 as I will ignore them when merging into deployment.  Please also
 do not force push so that git-blame remains usable for you all.
-(GitHub does not pose such restrictions (unless I pay which I won't :)
-thus it is your sole responsibility to make each other's lives easier.)
+GitHub does not pose such restrictions (unless I pay which I won't :)
+thus it is your sole responsibility to make each other's lives easier.
 
 If you have sensitive information you would like to have removed from
 the Git commit metadata, please DM me on Discord (yizmeng or yizmeng#7942),
