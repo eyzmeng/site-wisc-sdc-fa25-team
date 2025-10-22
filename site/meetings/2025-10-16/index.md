@@ -16,14 +16,21 @@ and therefore she is likely the one to do it next time?
 The following members are confirmed to be in Team 17 according
 to [Allie's finalized roster of the team emailed to the club](https://discord.com/channels/1428212879026552872/1428212880184184854/1430371438048710759):
 
- - Allie
- - me (ethan :P)
- - Bridget
- - Rose
- - Madhav
- - Saksham (Agent),
+ - Allie,
+ - me (ethan :P),
+ - Bridget,
+ - Rose,
+ - Madhav,
+ - Saksham (Agent).
 
-For the people who showed up at the meeting: I recall there was one
+(For people who are not on the list: Do not worry!  The list isn't
+that "formal".  You should be if you just participate the Discord
+server (which is what some of you are doing, so great job!)  Also,
+it is still important that people join the GitHub repository I
+created shortly after the meeting.  I will send out something later
+along the polls to remind people that it exists....)
+
+Among the people who showed up at the meeting, I recall there was one
 Master's student in computer science, me as a sophomore/2nd year,
 and the leader a junior/3rd year; then the rest are freshmen/1st year.
 (Most people are freshmen.)
@@ -35,6 +42,8 @@ thinking we'd go with [Electron](https://www.electronjs.org/), and
 for web services we'd go with some JS framework (Vue.js, Nuxt.js, Next.js)
 or Svelte over MySQL and possibly a Python API backend.  (I myself don't
 understand Django that well and I think the learning curve can be a bit steep.)
+Anyways, the specific software stack will be in their individual
+[ideas/](../../ideas/) page, so read that instead!
 
 The primary means of communication would still be Discord.
 

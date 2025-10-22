@@ -14,7 +14,7 @@ Task Manager
     cross platform (Windows, macOS, X11 Unix, iOS).  Extra bonus points if
     we can release it under a FOSS license.
 
-    For a full pitch, visit [task-manager.html](task-manager)!
+    For a full pitch, visit [task-manager](task-manager)!
 
 Bookkeeping/Finance
 
