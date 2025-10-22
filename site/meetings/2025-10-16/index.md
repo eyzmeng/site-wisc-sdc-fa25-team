@@ -2,7 +2,9 @@
 
 (I think Allie will be posting hers in the Discord server soon?
 This will be mine anyways.  I'm putting something down and hopefully
-by the end of this weekend we can all have something to look at.)
+by the end of this weekend we can all have something to look at.
+**Edit October 21**: I think everyone will just have to look at
+mine then, welp... it's a shame.)
 
 
 ## Survey and Logistics
@@ -38,6 +40,23 @@ The primary means of communication would still be Discord.
 
 ## Project Brainstorm
 
-Will post this later!  For now, have this whiteboard:
-
 ![](whiteboard.jpg)
+
+We looked at a few existing projects students at UW had made.
+
+*   [MadHousing.com](https://www.madhousing.com/): Housing info site.
+    Made at **SDC Club** Spring 2022 ([source](https://www.madhousing.com/about))
+*   [wisc.AlexT.se](http://wisc.alext.se/): Grading distribution site.
+    Made by one person (Alexander Tse).
+    *Maybe* open source but I couldn't find the source code.
+*   [MadGrades.com](https://madgrades.com/):  Yet another
+    grading distribution site.  [Open source](github.com/Madgrades/madgrades.com).
+*   [UWCourses.com](https://uwcourses.com/): Course-selection website
+    made at CheeseHacks Fall 2024, active to present.
+    [Open source](https://github.com/twangodev/uw-coursemap).
+*   [UWMatch.com](https://www.uwmatch.com/): made by a few people
+    with the help of Cursor from the end of December 2024,
+    active to present?  Closed source.  **Has had the desire to expand
+    to a centralized club (student org) hub.**
+
+Apparently doing something UW-related is very trendy.
