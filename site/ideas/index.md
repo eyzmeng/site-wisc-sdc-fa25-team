@@ -67,3 +67,11 @@ Synctree
     it can also manage large files between Git-annex remotes.
     (Why the heck would any of this appealing?  Well, imagine a Google Drive,
     but without Google... distributed, auditable, and free....)
+
+    The project will be called **synctree**, which is created in tandem with
+    my **hashtree** script/format for representing a checksum on an entire
+    directory.  More details on that in my [Perl 5 library homepage](https://www.rapidcow.org/lib/perl5/).
+    Something *very* similar to this can be found in an Asciinema cast
+    I did demonstrating how I manage the monstrously large repository
+    I had for CS400, with each branch containing an entirely separate
+    worktree for each assignment: [[part 1]](https://asciinema.org/a/717309) [[part 2]](https://asciinema.org/a/717308)
