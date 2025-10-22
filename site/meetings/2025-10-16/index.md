@@ -77,21 +77,58 @@ Here were our pitches:
 
 ## Task Manager
 
-(Ethan's idea) So I use a task manager called [TaskWarrior](https://github.com/GothenburgBitFactory/taskwarrior/tree/2.6.x).
-It has a lot of cool features: text-based data store so there is <u>no vendor lock-in</u>,
-ability to define and show <u>deadlines</u> with seconds precision, and custom <u>metadata</u>
-([UDA](https://taskwarrior.org/docs/udas/), although most of the time
-[I just use annotations](https://old.reddit.com/r/taskwarrior/comments/p1t5jl/comment/h8hbsvl/)).
-But there is just one problem with TaskWarrior: **it's on the command-line!**
-So if I'm not carrying a laptop, I can't use it on my phone (or actually
-I can use Termux or compile it on iSH, which I can then sync with Git...
-so I'm actually good :x didn't consider these when I proposed this idea
-to be honest, oh well...)
+(Ethan's pitch) So we're college students, and the amount of homework is
+unlike anything most of us have had before.  And although you can see
+most of your assignments & activities due for each day on Canvas (you can
+even tell Canvas to import those into Google Calendar which is something I
+always forget you can do \*facepalm\*), there is --- and I believe ---
+still value in taking responsibilities into our own hands: especially when
+we have a personal project where there is no roadmap and no partial
+project deadlines and check-ups laid out for us.  And well, we could use
+Obsidian and Notion, Microsoft Tasks, Google Tasks... or use [TaskWarrior](https://taskwarrior.org/)
+like me!  We would be re-inventing an existing solution, but that's fine
+--- it would be just as valuable as an experience, and maybe we can add
+a creative twist to it....
 
-Anyways it's still a hassle, I hope you can agree!  And most to-do
-lists are the market are just too complicated.  (And for those of you
-who use Bullet Journal, I still can't figure out what migration is...)
-I really want my to-do list to be just a list of tasks and nothing else.
+So what does a task manager need to remember, and how can it help us
+manage tasks?
 
-To be honest, I am not that enthusiatic about doing this project,
-since TaskWarrior works just fine for me.
+*   A task *description*.  Something actionable and specific, like
+    "Write a blog post about XXX" or "Inspect server logs since DATE".
+    There should be a way to write a short description (for overview)
+    and a long description (for the details, such as project
+    **requirements**/specifications, grading rubrics.  (In the case of
+    Canvas it is helpful to include a URL to the page for the assignment.))
+*   A task **deadline**.  For homework, this has a very literal
+    interpretaion: it's the date by which the task must be done.
+    And for those of us that are bad at mental math or get overwhelmed
+    by too many tasks easily (I am both), a task manager can *compute*
+    the relative date of the deadline, such as "due 2d from now" or
+    "due 13min from now".
+*   Task **dependencies**.  Now, for those of you who are CS students
+    (or maybe just a computer nerd), you may know that people have
+    invented [build systems](https://en.wikipedia.org/wiki/Build_automation)
+    over and over again: [Unix Make](https://en.wikipedia.org/wiki/Make_%28software%29);
+    [distutils](https://docs.python.org/3.0/library/distutils.html) and
+    [setuptools](https://setuptools.pypa.io/en/latest/) for Python 2/3;
+    [Apache Maven](https://maven.apache.org/) and [Gradle](https://gradle.org/)...
+    and somewhat recently there is [Ninja](https://ninja-build.org/).
+    Anyways, tangent aside, dependency management would be a powerful
+    feature (though only for very large projects I'm afraid).  Since
+    task dependency forms a directed acyclic graph, our task manager
+    would have to understand how to traverse this graph, how to find
+    dependents and dependees... something that the task manager must
+    learn, of course, is when a dependee is completed, it must mark
+    all dependees as ready.
+*   Nested tasks, or **sub-tasks**.  I didn't talk about this much
+    in the meeting, but this is the more realistic need for a task
+    manager.  The relationship contrasts with above (dependencies)
+    in that the parent task *comprises* on its children and is
+    *immediately* completed when all of its children are completed.
+    (Of course, I am talking about the possibility of arbitrarily
+    nested, which in and of itself is still an interesting challenge.)
+*   Task **weights**.  Put simply, some homework is simply worth more
+    points... if you can't do them all, then the task manager should
+    maximize the ones you can complete with more benefits --- that's
+    Economics 101!  (The measure of utility is purely theoretical and
+    beyond the scope of our software :)
