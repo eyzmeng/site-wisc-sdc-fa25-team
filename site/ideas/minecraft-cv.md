@@ -4,7 +4,7 @@
 
 ## Pitch
 
-[Copied from [meeting notes](../meetings/2025-10-16)]
+[Copied from [meeting notes](../meetings/2025-10-16/#minecraft-with-computers)]
 
 
 Using Computer Vision (OpenCV) to control games!  This feels like one of

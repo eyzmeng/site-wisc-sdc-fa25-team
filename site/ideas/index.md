@@ -31,7 +31,7 @@ Bookkeeping/Finance
     in-game resources).  Bonus point if (as Bridget proposes above) it can
     draw pretty graphs.  Extra bonus points again if it is FOSS too.
 
-From the [October 16 meeting](../meetings/2025-10-16/) we've seen some good ideas too 6ᴗ6
+From the [October 16 meeting](../meetings/2025-10-16/#project-brainstorm) we've seen some good ideas too 6ᴗ6
 
 Climate Analyzer
 

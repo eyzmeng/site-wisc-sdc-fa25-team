@@ -4,7 +4,7 @@
 
 ## Pitch
 
-[Copied from [meeting notes](../meetings/2025-10-16)]
+[Copied from [meeting notes](../meetings/2025-10-16/#climate-analyzer)]
 
 This is a more research-oriented, big-data project?  I don't remember a lot,
 but I will let the bullet points speak for themselves first.

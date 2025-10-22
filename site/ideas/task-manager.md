@@ -4,7 +4,7 @@ this is ethan's idea --- one of the [ideas](.)!
 
 ## Pitch
 
-[Copied from [meeting notes](../meetings/2025-10-16)]
+[Copied from [meeting notes](../meetings/2025-10-16/#task-manager)]
 
 So we're college students, and the amount of homework is
 unlike anything most of us have had before.  And although you can see
