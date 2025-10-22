@@ -1,6 +1,6 @@
 # Idea: Task Manager
 
-this is ethan's idea!
+this is ethan's idea --- one of the [ideas](.)!
 
 ## Pitch
 

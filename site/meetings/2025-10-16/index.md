@@ -71,9 +71,14 @@ We looked at a few existing projects students at UW had made.
 
 Apparently doing something UW-related is pretty trendy.
 
+(Also, Rose suggested that we do something AI/ML/LLM related... sadly,
+most of these projects proposed were not be about that.  And the last
+thing I know is to appeal to an employer, so maybe no AI just this one
+time, sorry....)
+
 Anyways, the final contenders from our meeting were my idea of **To-do list**
 and multiple people's idea of what eventually became **club discovery service**.
-Here were our pitches:
+Here were our pitches (listed in chronological order):
 
 ## Task Manager
 
@@ -122,3 +127,47 @@ manage tasks?
     all dependees as ready.
 
 For a more detailed and up-to-date page, see [ideas/task-manager](../../ideas/task-manager).
+
+
+## Climate Analyzer
+
+(Madhav's idea)
+
+This is a more research-oriented, big-data project?  I don't remember a lot,
+but I will let the bullet points speak for themselves first.
+
+*   Use Pandas (Data Science) and Machine Learning Libraries (Sci-kit learn).
+*   Analyze past climate trends to predict the future.
+
+From what I understand, user can navigate to this Climate Analyzer and
+input a region (e.g. Midwest US).  The Analyzer will then display a
+dashboard of charts, diagrams, and climate predictions for that region.
+
+(Also comment: I think linear regression was raised very often, but I don't
+see that is very much Machine Learning... this feels very much like a
+statistics open-ended research-themed project to me, which isn't super bad
+except I have zero idea what we would be doing to obtain the data or perform
+the analysis. :x)
+
+If you would like to develop on this idea, edit [ideas/climate-analyzer](../../ideas/climate-analyzer).
+
+
+## Minecraft with Computers
+
+(Saksham's idea)
+
+Using Computer Vision (OpenCV) to control games!  This feels like one of
+those "wow didn't know that was possible" projects I would come across on
+YouTube, but when I tried to look for them, only a few results turned up:
+
+*   "Play Minecraft with Body Gestures" by Taras Skavinskyy
+    [[medium]](https://medium.com/%40skavinskyy/play-minecraft-with-body-gestures-4b5b689e4729)
+    [[YouTube]](https://www.youtube.com/watch?v=Xd6eBCcqTKw&t=25s)
+*   "I Made My Own Mod to Play Minecraft in the Most Realistic Way" (Spanish) by
+    PyCrafting Tv [[YouTube]](https://www.youtube.com/watch?v=LejCs62U7nE)
+
+Most other "realistic" Minecraft control videos I've seen are about VR which
+is definitely beyond our budget to make (and basically a complete digression
+from "computer vision"...)
+
+If you would like to develop on this idea, edit [ideas/minecraft-cv](../../ideas/minecraft-cv)!

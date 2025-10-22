@@ -13,7 +13,7 @@ Task Manager
     can import Canvas tasks directly into the app.  Bonus points if it is
     cross platform (Windows, macOS, X11 Unix, iOS).  Extra bonus points if
     we can release it under a FOSS license.
-    
+
     For a full pitch, visit [task-manager.html](task-manager)!
 
 Bookkeeping/Finance
@@ -30,6 +30,17 @@ Bookkeeping/Finance
     (such as time in exchange of money; or in-game tokens in exchange of other
     in-game resources).  Bonus point if (as Bridget proposes above) it can
     draw pretty graphs.  Extra bonus points again if it is FOSS too.
+
+From the [October 16 meeting](../meetings/2025-10-16/) we've seen some good ideas too 6ᴗ6
+
+Climate Analyzer
+
+:   Use data science and machine learning libraries to analyze US climate.
+    See [climate-analyzer](climate-analyzer).
+
+Minecraft Computer Vision
+
+:   Using computer vision to control Minecraft.  See [minecraft-cv](minecraft-cv).
 
 ## Ethan's projects (help is appreciated :)
 
