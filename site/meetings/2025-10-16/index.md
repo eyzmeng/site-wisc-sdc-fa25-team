@@ -120,15 +120,5 @@ manage tasks?
     dependents and dependees... something that the task manager must
     learn, of course, is when a dependee is completed, it must mark
     all dependees as ready.
-*   Nested tasks, or **sub-tasks**.  I didn't talk about this much
-    in the meeting, but this is the more realistic need for a task
-    manager.  The relationship contrasts with above (dependencies)
-    in that the parent task *comprises* on its children and is
-    *immediately* completed when all of its children are completed.
-    (Of course, I am talking about the possibility of arbitrarily
-    nested, which in and of itself is still an interesting challenge.)
-*   Task **weights**.  Put simply, some homework is simply worth more
-    points... if you can't do them all, then the task manager should
-    maximize the ones you can complete with more benefits --- that's
-    Economics 101!  (The measure of utility is purely theoretical and
-    beyond the scope of our software :)
+
+For a more detailed and up-to-date page, see [ideas/task-manager](../../ideas/task-manager).
