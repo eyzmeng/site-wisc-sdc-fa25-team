@@ -216,3 +216,29 @@ is definitely beyond our budget to make (and basically a complete digression
 from "computer vision"...)
 
 If you would like to develop on this idea, edit [ideas/minecraft-cv](../../ideas/minecraft-cv)!
+
+
+## ~~Hackathon~~ Club Discovery
+
+Initially this was going to be about Devpost (as you can see in the middle
+of the board), but then I mentioned [win.wisc.edu](https://win.wisc.edu/)
+(Wisconsin Involvement Network; which I guess is just a fancy way of saying
+clubs and student organizations) and it became that instead....
+
+The idea is, win.wisc.edu is nice but... not nice enough in some ways.
+Either there's too much, or the filters are very limited.  Either way,
+this club discovery service is going to be a layer on top of win.wisc.edu:
+it takes data from win.wisc.edu (somehow), but enables you to search
+through the list with more powerful filters.  It will also do recommendations
+according to person-centric logic rather than club-centric one used by
+win.wisc.edu.
+
+The name for this app is undecided but I came up with the name "Club Radar"
+people seemed to like in some way.  I could provide a domain for the website
+like <u>clubradar.endfindme.com</u>, or if we deploy to Vercel/Netlify we
+can just use their domain.  The framework listed on the whiteboard were Flask
+(for prototyping) and [Anvil](https://anvil.works/) (for something?
+(I don't know anything about Anvil ask Saksham :x))
+
+This was the idea most people went with... see
+[ideas/club-radar](../../ideas/club-radar).

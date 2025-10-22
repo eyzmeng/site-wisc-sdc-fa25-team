@@ -42,6 +42,11 @@ Minecraft Computer Vision
 
 :   Using computer vision to control Minecraft.  See [minecraft-cv](minecraft-cv).
 
+Club Discover
+
+:   Dubbed "Club Radar" tentatively.  *Most people favored this at the
+    club meeting.*  See [club-radar](club-radar).
+
 ## Ethan's projects (help is appreciated :)
 
 E-mail on the phone
