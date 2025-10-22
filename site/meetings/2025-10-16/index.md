@@ -135,6 +135,42 @@ manage tasks?
     learn, of course, is when a dependee is completed, it must mark
     all dependees as ready.
 
+Finally, since we all use Canvas, it should be possible to import
+Canvas assignments, quizzes, and all that stuff into this task manager
+without having to manually type everything.  (So this is the sort of
+"**Canvas integration**" I was talking about, except it's nothing core,
+just a convenient plugin without which the app is still usable!)
+
+Below is a snapshot of my *real* TaskWarrior task database on this exact
+day, which is what I picture the imported the tasks would look like:
+
+```
+$ git switch --detach $(git log -1 --until='2025-09-24 11:00' --pretty=%h)
+$ faketime -f "$(git log -1 --pretty=%ai)" task
+
+ID Active Age   Project Tag     Due   Description                                                                                    Urg
+37  53s    6d   now     STAT431 13h   HW 2                                                                                           14.6
+                                        2025-09-17 Content-Location: https://canvas.wisc.edu/courses/466864/assignments/2787819
+                                        2025-09-17 1.12, 1.14, 1.16, 1.18, 1.32, 1.34, 1.36, 1.40
+38         6d   now     CS240    1d   Ch.4                                                                                           10.1
+                                        2025-09-17 Content-Location: https://canvas.wisc.edu/courses/466699/assignments/2823897
+41         4d   now     CS240    1d   Additional Participation 1                                                                     10.1
+33         2w   now     STAT431  2d   Mastery Check                                                                                  9.72
+                                        2025-09-17 Content-Location: https://canvas.wisc.edu/courses/466699/assignments/2823897
+34        12d   now     CS354    2d   p2A                                                                                             9.7
+                                        2025-09-12 Content-Location: https://canvas.wisc.edu/courses/463513/assignments/2764529
+                                        2025-09-17 Src-Header: https://canvas.wisc.edu/courses/463513/pages/program-commenting-guide
+40         6d   now     CS240    2d   Assignment 2                                                                                   9.67
+                                        2025-09-17 Content-Location: https://canvas.wisc.edu/courses/466699/assignments/2823860
+39         6d   now     CS354    3d   A04                                                                                            9.21
+27         2w   now     MATH521  8d   Homework 2                                                                                     7.11
+                                        2025-09-19 Content-Location: https://canvas.wisc.edu/courses/466939/assignments/2843806
+42         4d   now     CS354    9d   p2B                                                                                            6.46
+                                        2025-09-19 Content-Location: https://canvas.wisc.edu/courses/463513/assignments/2764530
+```
+
+(except of course, it would be a mobile app, not an ugly command-line thing. :)
+
 For a more detailed and up-to-date page, see [ideas/task-manager](../../ideas/task-manager).
 
 
