@@ -48,9 +48,16 @@ this is quite an ambitious project that rightfully falls under
 "help me out if you want but i'm fine if you don't lol". (￣▽￣||)
 
 
-##
+## What?
 
-Anyways enough about me.
+To put it simply: we are making a journaling app... but our approach /
+priority would be getting data in and out; but it's something that I
+will handle and you don't have to worry about ^^;
+
+The part that I think would be cool to work on though are the:
+
+ * "representation", namely the way media embeds in text.
+   (Yes, this is probably a lot like Microsoft word...)
 
 
 ## Software Stack
