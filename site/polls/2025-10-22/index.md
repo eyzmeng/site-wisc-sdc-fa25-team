@@ -1,4 +1,4 @@
-# Poll of Wednesday, October 22
+# Poll of ~~Wednesday, October 22~~ Thursday, October 23
 
 [[See all polls](..)]
 
