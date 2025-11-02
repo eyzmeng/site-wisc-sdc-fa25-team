@@ -18,33 +18,42 @@ having to use a web browser))
 *   Wednesday 18:00 to 20:00 (only if there is SDC club meeting)
 
 ```
-Scheduled for 2.
-2 FRI 15:45-FRI 17:15   @deyan @ethan
-2 SAT 13:00-SAT 15:00   @deyan @ethan
+Scheduled for 3.
+3 SAT 13:00-SAT 13:30   @deyan @ethan @saksham
+2 TUE 20:00-TUE 22:00   @ethan @saksham
+2 THU 16:00-THU 18:00   @ethan @saksham
+2 FRI 15:45-FRI 17:30   @deyan @ethan
+2 SAT 12:45-SAT 13:00   @ethan @saksham
+2 SAT 13:30-SAT 15:00   @deyan @ethan
 2 SUN 13:00-SUN 16:00   @deyan @ethan
+1 MON 10:00-MON 13:30   @deyan
 1 MON 15:45-MON 18:00   @ethan
 1 MON 20:00-TUE BEGIN   @ethan
 1 TUE 14:30-TUE 18:00   @ethan
-1 TUE 20:00-WED BEGIN   @ethan
+1 TUE 22:00-WED BEGIN   @ethan
+1 WED 10:00-WED 13:30   @deyan
 1 WED 15:45-THU BEGIN   @ethan
-1 THU 14:30-THU 18:00   @ethan
+1 THU 14:30-THU 16:00   @ethan
 1 THU 20:00-FRI BEGIN   @ethan
-1 FRI 15:00-FRI 15:45   @deyan
-1 FRI 17:15-FRI 18:00   @ethan
+1 FRI 11:00-FRI 14:00   @saksham
+1 FRI 17:30-FRI 18:00   @ethan
 1 FRI 20:00-FRI 22:00   @ethan
-1 SAT 11:30-SAT 13:00   @ethan
+1 SAT 11:30-SAT 12:45   @ethan
 1 SAT 15:00-SAT 17:00   @ethan
 1 SAT 22:00-SUN BEGIN   @ethan
 1 SUN 11:30-SUN 13:00   @ethan
 1 SUN 16:00-SUN 17:00   @ethan
 1 SUN 22:00-*********   @ethan
+0 MON 13:30-MON 15:45
 0 MON 18:00-MON 20:00
 0 TUE BEGIN-TUE 14:30
 0 TUE 18:00-TUE 20:00
-0 WED BEGIN-WED 15:45
+0 WED BEGIN-WED 10:00
+0 WED 13:30-WED 15:45
 0 THU BEGIN-THU 14:30
 0 THU 18:00-THU 20:00
-0 FRI BEGIN-FRI 15:00
+0 FRI BEGIN-FRI 11:00
+0 FRI 14:00-FRI 15:45
 0 FRI 18:00-FRI 20:00
 0 FRI 22:00-SAT 11:30
 0 SAT 17:00-SAT 22:00
@@ -97,13 +106,32 @@ SUN 22:00
 SUN 24:00
 
 @deyan
-FRI 15:00
-FRI 17:15
+MON 10:00
+MON 13:30
+
+WED 10:00
+WED 13:30
+
+FRI 15:45
+FRI 17:30
 
 SAT 13:00
 SAT 15:00
 SUN 13:00
 SUN 16:00
+
+@saksham
+TUE 20:00
+TUE 22:00
+
+THU 16:00
+THU 18:00
+
+FRI 11:00
+FRI 14:00
+
+SAT 12:45
+SAT 13:30
 
 @EOF
 ```
