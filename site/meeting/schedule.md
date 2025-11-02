@@ -42,10 +42,13 @@ Scheduled for 3.
 0 SUN 17:00-*********
 ```
 
-Raw intervals (data for machine consumption.
-(See [sched.pl](https://gist.github.com/eyzmeng/b121ce0de97d946fcd65839149d38638).)
+Raw intervals (data for machine consumption):
 
-```
+```perl
+# This top portion should be replaced with the Perl script at:
+#     <https://www.endfindme.com/cs400/bin/sched.pl>
+# The original code is trimmed here for brevity.
+
 __DATA__
 
 # The following data is migrated from When2Meet by hand.
@@ -55,8 +58,6 @@ __DATA__
 # permit entry of times prior to 10AM and past 11PM.
 # Intervals at the brink of those bounds do not neces-
 # sarily reflect the member's preference.
-#
-#
 
 
 @ethan
