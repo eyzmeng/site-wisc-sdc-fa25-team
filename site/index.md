@@ -6,7 +6,8 @@
 
 *  GitHub.com: [project repository](https://github.com/SDC-Fall-2025/Team-17-Project.git)
    -  [Original Project Page](ideas/club-radar)
-   -  [makeshift contribution guide](https://github.com/SDC-Fall-2025/Team-17-Project/blob/master/HACKING)
+   -  [makeshift contribution/development guide](https://github.com/SDC-Fall-2025/Team-17-Project/blob/master/HACKING)
+      (TODO)
    -  [clubradar.endfindme.com](https://clubradar.endfindme.com/): real web site deployment
    -  team.endfindme.com: [Persistent team web site for
       user and API documentations](https://team.endfindme.com/wisc/sdc/fa-25/public/)
