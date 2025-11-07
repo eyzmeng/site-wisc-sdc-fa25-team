@@ -4,8 +4,8 @@
 
 **Important** links:
 
-*  GitHub.com: [project repository](https://github.com/SDC-Fall-2025/Team-17-Project.git)
-   -  [Original Project Page](ideas/club-radar)
+*  GitHub.com: [project repository](https://github.com/SDC-Fall-2025/Team-17-Project.git) (Club Radar)
+   -  Project idea page for [Club Radar](ideas/club-radar)
    -  [makeshift contribution/development guide](https://github.com/SDC-Fall-2025/Team-17-Project/blob/master/HACKING)
       (TODO)
    -  [clubradar.endfindme.com](https://clubradar.endfindme.com/): real web site deployment
@@ -15,6 +15,7 @@
 *  Discord.com: [Software Devel Club, #team-17 channel](https://discord.com/channels/1197375935033389087/1421600028681572463)
 *  Discord.com: [Team 17](https://discord.com/channels/1428212879026552872)
 *  Club meetings:
+   -  [**Next Meeting: Saturday, November 08, 1-1:30 PM**](meetings/2025-11-08/)
    -  [Meeting Memo](meetings/)
    -  [Meeting Schedule](meeting/schedule)
 *  GitHub.com: [Issues](https://github.com/SDC-Fall-2025/Team-17-Project/issues) and
