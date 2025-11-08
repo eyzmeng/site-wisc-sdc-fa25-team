@@ -42,7 +42,8 @@ Announcements have email subjects with the prefix `[PSA]` or `Re: [PSA]`.
 plain text emails" in the [Collab survey](polls/2025-10-22/hacking),
 please send your email with `Content-Type: text/plain; charset="UTF-8"`
 (other encodings are fine, but [UTF-8](https://datatracker.ietf.org/doc/html/rfc3629)
-is strongly preferred) wrapped at 78 columns.
+is strongly preferred) wrapped at 78 columns.  Some more guidelines
+and recommendations are in [guide/hacker/mx101](guide/hacker/mx101).
 
 If you send HTML email, your message *will* be reduced to plain text
 for archival.  If you fail to wrap your lines, your message *will*
