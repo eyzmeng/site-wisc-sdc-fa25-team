@@ -74,6 +74,8 @@ In Windows cmd.exe, you want to use **[&#94;Z][]** instead of ^D to generate EOF
 
 [INT-TSTP-QUIT]: https://superuser.com/a/169057/2641288
 
+---
+
 Common in both Unix and Windows is something called a *prompt*.
 You very likely have heard of this: it's the string of text
 just before the cursor that *prompts* the user to type something.
@@ -135,13 +137,155 @@ $ fortune | cowsay
                 ||     ||
 ```
 
-means that I typed `fortune | cowsay^M` (^M being the Enter key)
+means that I typed `fortune | cowsay^M` (^M being the Enter key,
+and note that I type **without** the `$` as that is the *prompt*)
 into a Unix shell as an unprivileged user (i.e. no **sudo**(1)),
 and received an output of this cow saying some delusional things.
 
+Pay special attention to what *type* of prompt I am using: `$`
+and `#` are Unix, `PS C:\>` is Windows PowerShell, and `C:\>`
+is the Command Prompt (cmd.exe).  Also, take note of the comments:
+just like the prompts, they are not meant to be typed literally.
+So everything after `#`, `REM`, or `& REM` is to be left out
+of your real command.[^8]
+
+[^8]: Maybe you *could* given that they are technically comments,
+    in their respective shells, but do not hold me accountable
+    if they are syntactically invalid :x
+
+(Also, for the sake of my sanity, please stick to a Bourne shell
+like ash, dash, bash, or zsh.  **Do not use** csh or tcsh or fish
+(unless you are willing to learn on your own; there is plenty
+of resources) because I am too tired to teach people various
+*very different shells*.  When I write "BASHISM", *only* use
+bash or zsh.  (Note that Git-Bash, MinGW, and WSL would likely
+satisfy both of these conditions.))
+
+---
+
 Also common in both Unix and Windows is the concept of a *current
-directory*.  This is commonly displayed as a part of the *prompt*,
-but you can display it from the terminal.
+directory*.  (A directory is just a fancy term for a folder.)
+This is commonly displayed as a part of the *prompt*, but
+you can display it explicitly with the following commands:
+
+```
+#### cmd.exe
+C:\> cd
+
+#### PowerShell
+PS C:\> Get-Location
+PS C:\> pwd            # Unix compat
+
+#### Bourne shell (macOS and Linux)
+[user@puter ~]$ pwd
+```
+
+Sometimes it helps to see the contents of this directory
+as if you have a file explorer open in front of you.
+For that, list the contents like so:
+
+```
+#### cmd.exe
+C:\> dir
+
+#### PowerShell
+PS C:\> Get-ChildItem
+PS C:\> gci            # shorthand
+PS C:\> ls             # Unix compat
+
+#### Bourne shell (macOS and Linux)
+[user@puter ~]$ ls
+```
+
+To list *all* contents:
+
+```
+#### cmd.exe
+C:\> dir /a
+
+#### PowerShell
+PS C:\> Get-ChildItem -Force
+
+#### Bourne shell (macOS and Linux)
+[user@puter ~]$ ls -A
+```
+
+See
+[cd](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cd) (cmd.exe),
+[Get-Location](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-location?view=powershell-7.5) (PowerShell 7.5),
+[Get-ChildItem (gci)](https://stackoverflow.com/a/66269816/19411800),
+[pwd](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/pwd.html),
+[ls](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/ls.html).
+
+To change directory to a sub-directory named `child`, run one of these.
+You can confirm that your directory has changed by any one of the above
+commands or by reading the prompt.
+
+```
+### cmd.exe
+C:\> cd child
+C:\child> _
+
+### PowerShell: either one of these:
+PS C:\> Set-Location child
+PS C:\> cd child
+### ... would result in this:
+PS C:\child> _
+
+[user@puter ~]$ cd child
+[user@puter ~/child]$ _
+```
+
+To move up a directory (from child to parent), use the special name "`..`".
+
+```
+### cmd.exe
+C:\child> cd ..
+C:\>
+
+### PowerShell
+PS C:\child> Set-Location ..
+PS C:\>
+
+### Bourne shell
+[user@puter ~/child]$ cd ..
+[user@puter ~]$ _
+```
+
+To move to an arbitrary file, join the names with the operating system's
+path separator.  On Windows, this is the backslash, `"\"`.  On Unix,
+this is the forward slash `"/"`.  (With PowerShell, it can be either.)
+
+```
+### cmd.exe
+C:\> cd child\grandkid
+C:\child\grandkid> cd ..\..\sibling
+C:\sibling> cd %USERPROFILE%\project\web\src
+C:\Users\NAME\project\web\src> _
+
+### PowerShell
+PS C:\> Set-Location child\grandkid
+PS C:\child\grandkid> Set-Location ..\..\subling
+PS C:\sibling> Set-Location ~\project\web\src
+PS C:\Users\NAME\project\web\src> _
+
+### Cygwin / MinGW
+guy ~ $ cd child/grandkid
+guy ~/grandkid $ cd ../../subling
+guy ~/sibling $ cd "$(cygpath "$USERPROFILE")/project/web/src"
+guy /c/Users/NAME/project/web/src $ _
+
+### Bourne shell
+[user@puter ~]$ cd child/grandkid
+[user@puter ~/child/grandkid]$ cd ../../sibling
+[user@puter ~/sibling]$ cd ~/project/web/src
+[user@puter ~/project/web/src]$ _
+```
+
+For Windows, This assumes you are in the same volume.  If you are not,
+[switch volume first][DOS-switcheroo].
+
+[DOS-switcheroo]: https://superuser.com/a/135217/2641288 "better than i could have explained it"
 
 
 ### Flavors of Text Files: CRLF, LF, CR
