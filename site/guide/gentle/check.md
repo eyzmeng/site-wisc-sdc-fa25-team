@@ -17,7 +17,7 @@ which sometime later got rebranded as **macOS** again, this time
 without the space and without the leading capital letter.
 
 Then there is Linux, which was an effort to re-make Minix, but
-without Minix and free (just like stuff made by the GNU project).
+without Minix (and also *free* like stuff made by the GNU project).
 Linux inherits the Unix lineage too, though it doesn't always claim
 to stick around much.  (After all, GNU is literally a recursive
 acronym for GNU's Not Unix... (but I think that came more from the
@@ -37,6 +37,11 @@ here, relatively speaking.  Though in the light of various
 kinds of Unix-like operating systems (where even Linux itself
 has a wide variety distribution between say, Ubuntu and Alpine)
 you may start to feel that Windows is *the* oddball.
+
+If you use operating systems other than Windows, macOS, and
+Linux, you should let me know as I would most likely know
+next to nothing about them.  (I've used a bit of FreeBSD and
+NetBSD, but I know very little about those...)
 
 
 ### Flavors of Text Files
