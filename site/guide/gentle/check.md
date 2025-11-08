@@ -117,6 +117,28 @@ $ _
 
 (Yes, that `$` or `#` *is* a prompt!  Do not be fooled by its reticence!!!)
 
+Prompts being distinct from the output also helps differentiate
+the user *input* that I typed into the terminal from the *output*
+returned by the program I invoked.  For example:
+
+```
+$ fortune | cowsay
+ _______________________________________
+/ Let's not complicate our relationship \
+| by trying to communicate with each    |
+\ other.                                /
+ ---------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+```
+
+means that I typed `fortune | cowsay^M` (^M being the Enter key)
+into a Unix shell as an unprivileged user (i.e. no **sudo**(1)),
+and received an output of this cow saying some delusional things.
+
 Also common in both Unix and Windows is the concept of a *current
 directory*.  This is commonly displayed as a part of the *prompt*,
 but you can display it from the terminal.
