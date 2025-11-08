@@ -1,4 +1,4 @@
-# Self-check your 'puter knowledge!
+# Self-check your ’puter knowledge!
 
 Some basic stuff that is nice to know in general...
 
