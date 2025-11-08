@@ -17,7 +17,7 @@ know so I can look into it (and I apologize for my ignorance in advance).
 For Windows in particular, Windows 10 or newer would be nice since it ships
 with a built-in OpenSSH client.
 
-### The Terminal / Console / Command-Line / Shell
+## Part 0.1: The Terminal / Console / Command-Line / Shell
 
 *In this section, "Unix" means it applies to both modern macOS and Linux.
 Unless explicitly noted, the text applies to Unix.*
@@ -74,7 +74,7 @@ In Windows cmd.exe, you want to use **[&#94;Z][]** instead of ^D to generate EOF
 
 [INT-TSTP-QUIT]: https://superuser.com/a/169057/2641288
 
----
+## Part 0.1.1: The Prompt
 
 Common in both Unix and Windows is something called a *prompt*.
 You very likely have heard of this: it's the string of text
@@ -161,7 +161,7 @@ of resources) because I am too tired to teach people various
 bash or zsh.  (Note that Git-Bash, MinGW, and WSL would likely
 satisfy both of these conditions.))
 
----
+## Part 0.1.2: Changing Directories
 
 Also common in both Unix and Windows is the concept of a *current
 directory*.  (A directory is just a fancy term for a folder.)
@@ -288,7 +288,7 @@ For Windows, This assumes you are in the same volume.  If you are not,
 [DOS-switcheroo]: https://superuser.com/a/135217/2641288 "better than i could have explained it"
 
 
-### Flavors of Text Files: CRLF, LF, CR
+## Part 0.2: Flavors of Text Files: CRLF, LF, CR
 
 Let's return momentarily to our discussion of terminal devices
 and cooked mode.  (I swear this is not a digression!)
@@ -441,7 +441,6 @@ true to the typewriters, but at what cost...)
 [PM-ESC-G]: https://www.reddit.com/r/ProgrammerHumor/comments/7mbbdl/comment/drtbxrv/
 <!-- [NORETURN]: https://www.reddit.com/r/todayilearned/comments/urf7sn/comment/i8y7kom/ -->
 
-
-### Package Manager
-
-## Part 1:
+Anyways, for those on Windows: **please set core.autocrlf to true**
+as our repository will store everything canonically as Unix
+LF-separated files.  Please read [the Git setup tutorial](git).
