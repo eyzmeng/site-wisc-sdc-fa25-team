@@ -42,8 +42,8 @@ You are *not* expected to know most of these
 I guess, depending on our workflow).
 
 I know how to clone/fetch/pull the project repository.
-:   You can clone `https://github.com/SDC-Fall-2025/Team-17-Project.git`
-    **or** `git@github.com:SDC-Fall-2025/Team-17-Project.git`
+:   You can clone `https://github.com/SDC-Fall-2025/Team-17-Club-Radar.git`
+    **or** `git@github.com:SDC-Fall-2025/Team-17-Club-Radar.git`
     with Public Key Authentication.  For the latter, I know how to
     [add my SSH public key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
     to my GitHub account, and I know how to test that it works using
@@ -52,8 +52,8 @@ I know how to clone/fetch/pull the project repository.
     that do not grant Git shell access.)
 
 I know how to push to the project repository.
-:   You can push to `https://github.com/SDC-Fall-2025/Team-17-Project.git`
-    with Basic Authentication **or** `git@github.com:SDC-Fall-2025/Team-17-Project.git`
+:   You can push to `https://github.com/SDC-Fall-2025/Team-17-Club-Radar.git`
+    with Basic Authentication **or** `git@github.com:SDC-Fall-2025/Team-17-Club-Radar.git`
     with Public Key Authentication.  For the former, I know how to
     [create a Personal Access Token](https://github.com/settings/tokens)
     and use it as the HTTP password.  For the latter, see above.

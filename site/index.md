@@ -4,9 +4,9 @@
 
 **Important** links:
 
-*  GitHub.com: [project repository](https://github.com/SDC-Fall-2025/Team-17-Project.git) (Club Radar)
+*  GitHub.com: [project repository](https://github.com/SDC-Fall-2025/Team-17-Club-Radar) (Club Radar)
    -  Project idea page for [Club Radar](ideas/club-radar)
-   -  [makeshift contribution/development guide](https://github.com/SDC-Fall-2025/Team-17-Project/blob/master/HACKING)
+   -  [makeshift contribution/development guide](https://github.com/SDC-Fall-2025/Team-17-Club-Radar/blob/master/HACKING)
       (TODO)
    -  [clubradar.endfindme.com](https://clubradar.endfindme.com/): real web site deployment
    -  team.endfindme.com: [Persistent team web site for
@@ -18,8 +18,8 @@
    -  [**Next Meeting: Saturday, November 08, 1-1:30 PM**](meetings/2025-11-08/)
    -  [Meeting Memo](meetings/)
    -  [Meeting Schedule](meeting/schedule)
-*  GitHub.com: [Issues](https://github.com/SDC-Fall-2025/Team-17-Project/issues) and
-   [Pull Requests](https://github.com/SDC-Fall-2025/Team-17-Project/pulls)
+*  GitHub.com: [Issues](https://github.com/SDC-Fall-2025/Team-17-Club-Radar/issues) and
+   [Pull Requests](https://github.com/SDC-Fall-2025/Team-17-Club-Radar/pulls)
    -  list.rapidcow.org: [SDC Team mailing list archive](https://list.rapidcow.org/inbox/wisc-sdc-fa25-team/)
 
 Obsolete links:
