@@ -122,15 +122,15 @@ directory*.  This is commonly displayed as a part of the *prompt*,
 but you can display it from the terminal.
 
 
-### Flavors of Text Files: CR, LF, CRLF
+### Flavors of Text Files: CRLF, LF, CR
 
 Let's return momentarily to our discussion of cooked mode
 terminal devices.  (I swear this is not a digression!)
 
 *Again, unless specified, I'm talking about Unix.*
 
-Remember that some control sequences are interpreted as
-signals sent from the kernel:  in the previous section, we
+Remember how some control sequences are interpreted as
+signals sent from the kernel?  In the previous section, we
 looked at how ^C sends SIGINT, the keyboard interrupt signal;
 and ^D sends EOF.  Notice how none of these sends any real
 control character.  For instance, ^D is the [End-of-Transmission][]
@@ -141,9 +141,9 @@ that is, the receiving end would never read a literal ^D
 
 However, a selection of control characters *are* sent literally:
 the *line endings*.  But the process is a little bit more involved
-than just passing along.  The reason is because the *canonical*
+than just passing along.  And it all starts with the *canonical*
 end-of-line (EOL) sequence[^7] (both in terms of the ASCII
-standard and Internet standard[^4]) is comprised of *two*
+standard and Internet standard[^4]) being comprised of *two*
 control characters:
 
 [^7]: This guy has a bajilion names: end-of-line (EOL), line
@@ -210,10 +210,11 @@ at home when they're not talking to different computers.
   ASCII and Internet standards, which have existed for a *long*
   time before Mac OS did!)... but they made that choice anyways.
 
-And honestly, [I don't know why][JOBSWAY].  They *did* decide
-that it was a silly idea eventually, and following OS X in
-which they adopted their userspace from FreeBSD Unix, they
-finally joined the LF gang like Linux and the rest of Unix
+And honestly... [I don't know why][JOBSWAY].  They *did* decide
+that it was a silly idea eventually, and with the release of
+OS X, they switched their userspace to FreeBSD Unix and
+finally left their relic `':'` path separator, line separator,
+and joined the `'/'` LF gang like Linux and the rest of Unix
 nerds.  But [the damage has been done](https://retrocomputing.stackexchange.com/q/21903)...
 the world now has CRLF, LF, *and* CR to live with.
 
@@ -247,6 +248,9 @@ the world now has CRLF, LF, *and* CR to live with.
 [End-of-Transmission]: https://www.asciihex.com/character/control/4/0x04/eot-end-of-transmission
 [^3]: The key they send [can deviate][ret-vs-etr], but usually both keys send carriage return.
 [ret-vs-etr]: https://unix.stackexchange.com/questions/253271/understanding-return-enter-and-stty-icrlf#comment436939_253273
+
+(Huh.  Maybe EBCDIC wasn't so bad after all.  We stayed
+true to the typewriters, but at what cost...)
 
 Of course, it would be unfortunate if pressing the Enter key
 (which sends ^M) only moved the cursor back without moving it
