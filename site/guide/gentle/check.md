@@ -147,13 +147,13 @@ standard and Internet standard[^4]) being comprised of *two*
 control characters:
 
 [^7]: This guy has a bajilion names: end-of-line (EOL), line
-    terminator / separator / delimiter, newline.  You will
-    see me use them interchangeably (although "newline"
+    terminator / ending / separator / delimiter, newline.  You
+    will see me use them interchangeably (although "newline"
     is a specific term, which we will get to when we talk
     about the Unix model of text file representation.)
     I personally prefer to call it either EOL sequence or
-    line terminator, since they emphasize the fact that lines
-    should end with one, even if it is the last line and
+    line terminator / ending, since they emphasize the fact that
+    all lines should end with one, *including* last line where
     there is no "new line" that comes after, or a line to
     separate / delimit this last line from.  In fact, as of
     late, I have come to the conclusion with CPython members
