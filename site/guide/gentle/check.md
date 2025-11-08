@@ -228,9 +228,9 @@ at home when they're not talking to different computers.
 And honestly... [I don't know why][JOBSWAY].  They *did* decide
 that it was a silly idea eventually, and with the release of
 OS X, they switched their userspace to FreeBSD Unix and
-finally left their relic `':'` path separator, line separator,
-and joined the `'/'` LF gang like Linux and the rest of Unix
-nerds.  But [the damage has been done](https://retrocomputing.stackexchange.com/q/21903)...
+finally left their relic `':'` path separator and `"\r"` line ending,
+and joined the `'/'` LF gang like Linux and the rest of Unix.
+But [the damage has been done](https://retrocomputing.stackexchange.com/q/21903)...
 the world now has CRLF, LF, *and* CR to live with.
 
 [^6]: Perhaps they didn't pick CR because it could stlil be used for
