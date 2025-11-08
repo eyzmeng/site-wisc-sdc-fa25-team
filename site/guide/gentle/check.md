@@ -124,8 +124,8 @@ but you can display it from the terminal.
 
 ### Flavors of Text Files: CRLF, LF, CR
 
-Let's return momentarily to our discussion of cooked mode
-terminal devices.  (I swear this is not a digression!)
+Let's return momentarily to our discussion of terminal devices
+and cooked mode.  (I swear this is not a digression!)
 
 *Again, unless specified, I'm talking about Unix.*
 
@@ -190,7 +190,9 @@ The *real* deviation comes from how computers *store* lines
 at home when they're not talking to different computers.
 
 * MS-DOS (which evolved into Windows) took the safe way and just
-  [followed the standards][DOS-WAY], CRLF.
+  [followed the standards][DOS-WAY], CRLF.  Rather verbose, but
+  definitely safe.
+
 * Multics took just the last control character, LF
   ([because it was shorter to type][newline#history][^6])
   and assigned it a new role called *newline*, meant to represent
@@ -201,6 +203,19 @@ at home when they're not talking to different computers.
   back into the EOL local to the platform; with `'\n'` being both
   the in-memory transient representation and the on-disk persistent
   representation when the program itself resides on a Unix computer.[^5]
+
+  On the terminal, well -- going back to the topic of cooked mode,
+  recall that pressing Enter / Return would literally emits a ^M,
+  which moves the cursor back to the start of line without moving
+  it down to a new line.  So what the drivers do is [translate ^M
+  into CRLF][SNEAK-LF] *behind the scenes*, so you can still press
+  just enter and it works just as you would expect.[^1]
+  (Note that when text goes in the other direction, i.e. from
+  a *program* to the terminal, the interpretation is done by
+  the terminal emulator where a `"\n"` *always* resets the cursor
+  back to the beginning, so that no funny staircase-looking text
+  would result.)
+
 * Mac OS (specifically *pre* OS X, when it wasn't Unix-based),
   which emerged later than *both* MS-DOS and Unix (though preceded
   Windows and Linux), decided that it wasn't going to follow CRLF
@@ -252,18 +267,11 @@ the world now has CRLF, LF, *and* CR to live with.
 (Huh.  Maybe EBCDIC wasn't so bad after all.  We stayed
 true to the typewriters, but at what cost...)
 
-Of course, it would be unfortunate if pressing the Enter key
-(which sends ^M) only moved the cursor back without moving it
-down to the beginning.  That's why the drivers in cooked mode
-actually translates ^M into CRLF *behind the scenes*, so you
-can still press just enter and it works just as you would
-expect.[^1]
-
 [^1]: For the interested readers, consult the manual page
     of **stty(1)** in your system.  Example: [[linux](https://linux.die.net/man/1/stty)]
     [[macOS](https://leopard-adc.pepas.com/documentation/Darwin/Reference/ManPages/man1/stty.1.html)]
 
-<!-- [SNEAK-LF]: https://news.ycombinator.com/item?id=13499577 -->
+[SNEAK-LF]: https://news.ycombinator.com/item?id=13499577
 [PM-ESC-G]: https://www.reddit.com/r/ProgrammerHumor/comments/7mbbdl/comment/drtbxrv/
 <!-- [NORETURN]: https://www.reddit.com/r/todayilearned/comments/urf7sn/comment/i8y7kom/ -->
 
