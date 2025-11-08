@@ -63,6 +63,16 @@ Terminal (TTY) drivers by default operate in [cooked mode][].
 <!-- Found a better link here: https://superuser.com/a/169055/2641288 -->
   [SIGINT]: https://en.wikipedia.org/wiki/Signal_%28IPC%29#SIGINT
   [EOF]: https://en.wikipedia.org/wiki/End-of-file
+  
+In Windows cmd.exe, you want to use **[&#94;Z][]** instead of ^D to generate EOF.[^2]
+
+[&#94;Z]: https://superuser.com/a/291225/2641288
+[^2]: Be careful as ^Z on *Unix* suspends the program by sending SIGTSTP.
+    If you unintentionally that control sequence, you should run `fg` to
+    resume the program in foreground.
+    ([This][INT-TSTP-QUIT] can be a useful reference.)
+
+[INT-TSTP-QUIT]: https://superuser.com/a/169057/2641288
 
 Common in both Unix and Windows is something called a *prompt*.
 You very likely have heard of this: it's the string of text
@@ -117,6 +127,8 @@ but you can display it from the terminal.
 Let's return momentarily to our discussion of cooked mode
 terminal devices.  (I swear this is not a digression!)
 
+*Again, unless specified, I'm talking about Unix.*
+
 Remember that some control sequences are interpreted as
 signals sent from the kernel:  in the previous section, we
 looked at how ^C sends SIGINT, the keyboard interrupt signal;
@@ -127,15 +139,114 @@ of the control sequence, it does not get actually transmitted:
 that is, the receiving end would never read a literal ^D
 *character*!
 
-A selection of control characters *are* sent literally, however.
-For instance, ^M sends carriage return (U+000D, `"\r"`), which
-returns the cursor to the beginning (hence the name carriage *return*).
-Combine this with the line feed (U+000A, `"\n"`) which
-moves a virtual roll of paper upward (like a typewriter),
-and you get the standard end-of-line sequence: **CRLF**, or `"\r\n"`.
+However, a selection of control characters *are* sent literally:
+the *line endings*.  But the process is a little bit more involved
+than just passing along.  The reason is because the *canonical*
+end-of-line (EOL) sequence[^7] (both in terms of the ASCII
+standard and Internet standard[^4]) is comprised of *two*
+control characters:
 
+[^7]: This guy has a bajilion names: end-of-line (EOL), line
+    terminator / separator / delimiter, newline.  You will
+    see me use them interchangeably (although "newline"
+    is a specific term, which we will get to when we talk
+    about the Unix model of text file representation.)
+    I personally prefer to call it either EOL sequence or
+    line terminator, since they emphasize the fact that lines
+    should end with one, even if it is the last line and
+    there is no "new line" that comes after, or a line to
+    separate / delimit this last line from.  In fact, as of
+    late, I have come to the conclusion with CPython members
+    that [their new email library API officially solely capable
+    of modeling text files as lines of EOL-terminated strings
+    *including* the last line][GH-121515].  It is best to
+    accept that lines must be EOL-terminated and to treat
+    text as lines of strings that *end* with EOL, rather
+    than only *delimited* with EOLs between adjacent lines.
+
+[^4]: See [RFC 158][] and [EOLstory.txt][].
+[RFC 158]: https://www.rfc-editor.org/rfc/rfc158
+[EOLstory.txt]: https://www.rfc-editor.org/old/EOLstory.txt "referenced by: https://stackoverflow.com/a/23235845/19411800"
+[GH-121515]: https://github.com/python/cpython/issues/121515#issuecomment-2603100526
+
+<!-- Typographically, the proportional "J" seems too narrow to me -->
+
+* `^M` is **[carriage return][CR]** (CR, U+000D, `"\r"`), which returns
+  the cursor to the beginning (hence the name carriage *return*).
+  This is the character sent from your input device (keyboard)
+  when you hit the Return or Enter key.[^3]  (*Or* you may do
+  it by holding Control and pressing M.)
+* `^J` is the **[line feed][LF]** (LF, U+000A, `"\n"`), which *feeds*
+  a new line into the cursor by moving the virtual roll of
+  paper upward (hence the name line *feed*).
+
+Together you get the standard end-of-line sequence:
+**CRLF**, or `"\r\n"`.  People were okay with this<!-- except possibly this guy:
+https://www.reddit.com/r/programming/comments/1hbvik1/crlf_considered_harmful/ -->,
+and we know protocols like FTP, SMTP, HTTP all talk
+in the common language of CRLF.  No deviation with that.
+
+The *real* deviation comes from how computers *store* lines
+at home when they're not talking to different computers.
+
+* MS-DOS (which evolved into Windows) took the safe way and just
+  [followed the standards][DOS-WAY], CRLF.
+* Multics took just the last control character, LF
+  ([because it was shorter to type][newline#history][^6])
+  and assigned it a new role called *newline*, meant to represent
+  the one true line terminator.  This is implemented in the
+  standard C library (libc)'s model of text files, where a
+  file pointer **fopen**(3)'d in text mode would have EOLs
+  translated into `'\n'` on write, and have `'\n'` translated
+  back into the EOL local to the platform; with `'\n'` being both
+  the in-memory transient representation and the on-disk persistent
+  representation when the program itself resides on a Unix computer.[^5]
+* Mac OS (specifically *pre* OS X, when it wasn't Unix-based),
+  which emerged later than *both* MS-DOS and Unix (though preceded
+  Windows and Linux), decided that it wasn't going to follow CRLF
+  as MS-DOS, nor follow LF as Unix, but instead picked CR and went
+  with it.  Surely it wasn't a very logical choice given it came
+  later (not to mention that CRLF itself is just MS-DOS following
+  ASCII and Internet standards, which have existed for a *long*
+  time before Mac OS did!)... but they made that choice anyways.
+
+And honestly, [I don't know why][JOBSWAY].  They *did* decide
+that it was a silly idea eventually, and following OS X in
+which they adopted their userspace from FreeBSD Unix, they
+finally joined the LF gang like Linux and the rest of Unix
+nerds.  But [the damage has been done](https://retrocomputing.stackexchange.com/q/21903)...
+the world now has CRLF, LF, *and* CR to live with.
+
+[^6]: Perhaps they didn't pick CR because it could stlil be used for
+    overprinting text ("[the poor man's \033&#91;G][PM-ESC-G]", as one
+    Reddit comment puts it).  Or perhaps they picked it so that [CRLF-delimited text
+    would still appear as regular lines][UNIXWAY] (which I just so happened
+    to [recently utilitize][ICON-CR]).  Of course this choice to deviate
+    is [not without headaches][Bash-fail] (but that's kind of also
+    why we're here!)
+
+[^5]: This is inherited by both [Perl `"\n"`](https://perldoc.perl.org/perlport#Newlines)
+    and [Python's Universal newline model](https://docs.python.org/3/glossary.html#term-universal-newlines "the term references PEP 278 &ldquo;Universal Newline Support&rdquo; and PEP 3116 &ldquo;Newline I/O&rdquo;").
+    Compare this [newline][] model to EBCDIC's next line, [NL][]
+    (which actually (I just learned) [got adopted][NEL] into
+    the Unicode C1 control characters, by the way!))
+
+[NL]: https://en.wikipedia.org/wiki/EBCDIC#NL
+[newline]: https://en.wikipedia.org/wiki/Newline
+[newline#history]: https://en.wikipedia.org/wiki/Newline#History
+[NEL]: https://en.wikipedia.org/wiki/C0_and_C1_control_codes#NEL
+
+[CR]: https://www.asciihex.com/character/control/13/0x0D/cr-carriage-return
+[LF]: https://www.asciihex.com/character/control/10/0x0A/lf-line-feed
+[DOS-WAY]: https://devblogs.microsoft.com/oldnewthing/20040318-00/?p=40193 "from https://stackoverflow.com/a/34797622/19411800"
+[UNIXWAY]: https://web.archive.org/web/20040531194934/http://www.essenz.com/support/comp.unix.misc/Sep/20/40645.html "from https://stackoverflow.com/a/34797622/19411800"
+[JOBSWAY]: https://www.reddit.com/r/ProgrammerHumor/comments/7mbbdl/comment/drtpif4/ "Ironically I found no memo regarding this rash decision either."
+[ICON-CR]: https://github.com/SDC-Fall-2025/Team-17-Club-Radar/blob/cafa8f4849cb6ee1763138254ee5f203a30955c5/.gitignore#L102
+[Bash-fail]: www.reddit.com/r/programming/comments/1hbvik1/comment/m1jbmjy/ "I suspect the &ldquo;nonsensical errors&rdquo; had to do with heredocs, where (I believe) Bash would be picky about whether you entered a EOF or EOF\r, but&hellip; I&rsquo;m not going to test it now. :P"
 <!-- Thank you for still indexing this DuckDuckGo!!! QvQ -->
 [End-of-Transmission]: https://www.asciihex.com/character/control/4/0x04/eot-end-of-transmission
+[^3]: The key they send [can deviate][ret-vs-etr], but usually both keys send carriage return.
+[ret-vs-etr]: https://unix.stackexchange.com/questions/253271/understanding-return-enter-and-stty-icrlf#comment436939_253273
 
 Of course, it would be unfortunate if pressing the Enter key
 (which sends ^M) only moved the cursor back without moving it
@@ -147,6 +258,10 @@ expect.[^1]
 [^1]: For the interested readers, consult the manual page
     of **stty(1)** in your system.  Example: [[linux](https://linux.die.net/man/1/stty)]
     [[macOS](https://leopard-adc.pepas.com/documentation/Darwin/Reference/ManPages/man1/stty.1.html)]
+
+<!-- [SNEAK-LF]: https://news.ycombinator.com/item?id=13499577 -->
+[PM-ESC-G]: https://www.reddit.com/r/ProgrammerHumor/comments/7mbbdl/comment/drtbxrv/
+<!-- [NORETURN]: https://www.reddit.com/r/todayilearned/comments/urf7sn/comment/i8y7kom/ -->
 
 
 ### Package Manager
