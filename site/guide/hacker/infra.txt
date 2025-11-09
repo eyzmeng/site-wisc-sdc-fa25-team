@@ -186,48 +186,48 @@ unless stated otherwise.
         trademark history?  Me neither!  But here's that for reference
         anyways.
 
-	 <https://daringfireball.net/projects/markdown/#acknowledgements>   (excerpt:
-	    Aaron Swartz [1] deserves a tremendous amount of credit for his
-	    feedback on the design of Markdown’s formatting syntax. Markdown is
-	    much better thanks to Aaron’s ideas, feedback, and testing. Also,
-	    Aaron’s html2text is a very handy (and free) utility for turning
-	    HTML into Markdown-formatted plain text.
+         <https://daringfireball.net/projects/markdown/#acknowledgements>   (excerpt:
+            Aaron Swartz [1] deserves a tremendous amount of credit for his
+            feedback on the design of Markdown’s formatting syntax. Markdown is
+            much better thanks to Aaron’s ideas, feedback, and testing. Also,
+            Aaron’s html2text is a very handy (and free) utility for turning
+            HTML into Markdown-formatted plain text.
 
             [1]: https://aaronsw.com
-	  )
+          )
 
          <https://onemanandhisblog.com/2014/09/markdown-commonmark-open-source-controversy/>
            <https://twitter.com/gruber/status/509042850483687424>  (excerpt:
-	     @adders A niggle: I am Markdown’s sole creator, not co-creator. I assume,
-	     you’re thinking of Aaron Swartz, whose feedback was instrumental…
-	   )
+             @adders A niggle: I am Markdown’s sole creator, not co-creator. I assume,
+             you’re thinking of Aaron Swartz, whose feedback was instrumental…
+           )
          <https://crossword.fm/s09/e13/>  (excerpt:
             Luke:
-	    But I’m curious about the genesis, you know, like, is this like a,
-	    is this like a weekend project that you’re like, “wouldn’t it be
+            But I’m curious about the genesis, you know, like, is this like a,
+            is this like a weekend project that you’re like, “wouldn’t it be
             cool if…”, or is it a long term?
             
             John:
             No, well, hmm.
             
-	    So basically the timeline - and, again, I don’t want to be a
-	    downer, and there’s this whole sort of sidetrack thing where it’s
-	    like, that actually Aaron [Swartz] was the co-creator of Markdown,
-	    which is not true. But he was the one beta tester of Markdown who
-	    got it right from the start and was the one who gave me the best
-	    and most feedback. He was effectively, you know, boiled down to me
-	    making it, thinking I’ve got something here. And Aaron being the
-	    beta tester who was like, “Yeah, you’ve got something here. Keep
-	    going. You know, you’re almost done.”
+            So basically the timeline - and, again, I don’t want to be a
+            downer, and there’s this whole sort of sidetrack thing where it’s
+            like, that actually Aaron [Swartz] was the co-creator of Markdown,
+            which is not true. But he was the one beta tester of Markdown who
+            got it right from the start and was the one who gave me the best
+            and most feedback. He was effectively, you know, boiled down to me
+            making it, thinking I’ve got something here. And Aaron being the
+            beta tester who was like, “Yeah, you’ve got something here. Keep
+            going. You know, you’re almost done.”
          )
 
          In 2014 people tried to standardize Markdown as it had made its
          way into many, MANY platforms -- from GitHub to Reddit and all.
          That's basically the story of CommonMark <https://commonmark.org/>.
           ... except it didn't start there.
-	 (I am not going to quote these; this is going to take me ages....)
+         (I am not going to quote these; this is going to take me ages....)
            <https://blog.codinghorror.com/standard-flavored-markdown/>
-	     <https://blog.codinghorror.com/standard-markdown-is-now-common-markdown/>
+             <https://blog.codinghorror.com/standard-markdown-is-now-common-markdown/>
        )
     Content-Length
        Header borrowed from RFC 2046.
@@ -244,15 +244,15 @@ unless stated otherwise.
      These can be generated running:
 
          git notes --ref=letters show bip/club-radar |
-	 perl -012 -ne 'print unless 1 .. /^$/' |
-	 openssl dgst <METHOD> -binary | base64
+         perl -012 -ne 'print unless 1 .. /^$/' |
+         openssl dgst <METHOD> -binary | base64
 
      where <METHOD> is replaced with:
 
          -sha1       for sha
-	 -sha256     for sha-256
-	 -sha384     for sha-384
-	 -sha512     for sha-512
+         -sha256     for sha-256
+         -sha384     for sha-384
+         -sha512     for sha-512
 
 The payload is the string attribute: .pull_request.body.
 
