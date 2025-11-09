@@ -443,4 +443,4 @@ true to the typewriters, but at what cost...)
 
 Anyways, for those on Windows: **please set core.autocrlf to true**
 as our repository will store everything canonically as Unix
-LF-separated files.  Please read [the Git setup tutorial](git).
+LF-separated files.  Please read [the Git setup tutorial](install/git-vcs).
