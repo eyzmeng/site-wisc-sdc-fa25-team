@@ -444,3 +444,24 @@ true to the typewriters, but at what cost...)
 Anyways, for those on Windows: **please set core.autocrlf to true**
 as our repository will store everything canonically as Unix
 LF-separated files.  Please read [the Git setup tutorial](../install/git-vcs).
+
+
+## Part 0.9: Resources for the Command-Line
+
+This should get you started with the command-line
+(and the good ol' days of computing...)
+
+I would like to end with a few resources I can come up
+off the top of my head for learning and practicing how
+to use the terminal and all.
+
+*  [Telehack](https://telehack.com/telehack.html)!
+   [This](https://fcs-cs.github.io/cs1-2018/modules/06-the%20internet/telehack/)
+   should get you started.
+*  In-depth dives for the Bash shell (relevant to macOS/Linux Bash (*and* [Z Shell](https://zsh.sourceforge.io/ "zsh"), in many ways!)):
+   -  [Bash Guide for Beginners](https://tldp.org/LDP/Bash-Beginners-Guide/html/), TLDP
+   -  [Sh - the Bourne Shell](https://www.grymoire.com/Unix/Bourne.html), Bruce Barnett
+   -  [GreyCat (Greg)'s Wiki](https://mywiki.wooledge.org/), in particular, BashGuide
+   -  [Unix pipeline resources](pages.cs.wisc.edu/~emeng/cs400/piazza/unix/pipe.html) (link collection by *me*!)
+
+["May the command line live forever..."](https://www.youtube.com/playlist?list=PL7nj3G6Jpv2G6Gp6NvN1kUtQuW8QshBWE)
