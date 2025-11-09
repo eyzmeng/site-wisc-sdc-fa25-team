@@ -23,7 +23,12 @@ As of Wednesday 10PM we've observed the following votes:
 
 I have no idea what to conclude from this.  (I thought the club
 had you guys watch GitHub tutorials or something like that?)
-Anyways, we will go over basic Git operations in the next meeting.
+Anyways, ~~we will go over basic Git operations in the next meeting~~
+since we have been unable to meet and will unlikely meet in person
+any time soon, please learn the necessary skills independently,
+and actively reach out for help if you need any.  That said, you
+should still read [the install guide](../../guide/install/git-vcs)
+(namely to Windows users, set your `core.autocrlf` to true!!!)
 
 
 ## Choices
