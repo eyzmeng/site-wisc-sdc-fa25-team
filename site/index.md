@@ -1,4 +1,4 @@
-# Welcome to our Team 17's Site!
+# Welcome to the Team 17's Site!
 
 ## Quick Links
 
