@@ -28,6 +28,11 @@ Participation in *any* other repository is **optional, OPTIONAL, OPTIONAL!!!**
 (If you are confused by the repositories I have shared in the past,
 read my [infrastructure notes](guide/hacking/infra.txt).)
 
+Meeting notes:
+
+*  [October 16, Morgridge Hall 2525](meetings/2025-10-16/)
+*  [November 8, On-Line](meetings/2025-11-08/)
+
 Site map of obsolete links:
 
 *  [Meeting schedule](meeting/schedule)  (One person showed
