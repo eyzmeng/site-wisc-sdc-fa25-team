@@ -1,5 +1,11 @@
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 * infra.txt - git vcs repository infrastructure *
+*                                               *
+*                 presented by ... ...          *
+*        ^__^                                   *
+* %  __.-(o<)          Ethan Yizheng Meng       *
+*  \/    (__)    <ethan [at] rapidcow.org>!     *
+*  (______)_/                                   *
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 All repositories live on github.com.
