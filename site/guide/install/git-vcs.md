@@ -25,4 +25,4 @@ true
 ```
 
 (For a history lecture on how computer systems diverged in their
-native representation of line endings, [see here](../check#part-02-flavors-of-text-files-crlf-lf-cr).)
+native representation of line endings, [see here](../gentle/check#part-02-flavors-of-text-files-crlf-lf-cr).)
